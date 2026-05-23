@@ -1,0 +1,25 @@
+.user-all-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.user-personal-info p {
+    margin: 0;
+    font-size: 14px;
+}
+.user-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: gray;
+}
+
+.user-personal-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}

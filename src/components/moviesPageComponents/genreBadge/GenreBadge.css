@@ -1,0 +1,21 @@
+.custom-genre-badge {
+    background-color: rgba(198, 235, 255, 0.05) !important;
+    border: 1px solid rgba(198, 235, 255, 0.2) !important;
+    border-radius: 30px;
+    color: #c6ebff !important;
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(4px);
+    display: inline-block;
+}
+
+
+.custom-genre-badge:hover {
+    background-color: rgba(198, 235, 255, 0.15) !important;
+    border-color: #b4eff3 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(180, 239, 243, 0.2) !important;
+}

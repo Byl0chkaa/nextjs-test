@@ -1,0 +1,44 @@
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.pag-btn {
+    background: rgba(198, 235, 255, 0.05);
+    border: 1px solid rgba(198, 235, 255, 0.3);
+    color: #c6ebff;
+    padding: 12px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.pag-btn:hover:not(:disabled) {
+    background: rgba(198, 235, 255, 0.15);
+    border-color: #c6ebff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(198, 235, 255, 0.1);
+}
+
+.pag-btn:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    border-color: rgba(198, 235, 255, 0.1);
+}
+
+
+.current-num {
+    background: rgba(198, 235, 255, 0.1);
+    color: #c6ebff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: 1px solid rgba(198, 235, 255, 0.2);
+}

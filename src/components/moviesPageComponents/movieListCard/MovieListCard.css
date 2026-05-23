@@ -1,0 +1,54 @@
+.movie-card {
+    background: #121c28;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(198, 235, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.movie-card:hover {
+    transition: 0.5s;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(180, 239, 243, 0.1);
+    border-color: rgba(180, 239, 243, 0.3);
+}
+
+.movie-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-preview-container {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+    display: block;
+}
+
+.poster-image {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    object-position: center;
+    border-radius: 25px 25px 0 0;
+    display: block;
+}
+
+.card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.genres-container {
+    padding: 0 16px 16px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+}
