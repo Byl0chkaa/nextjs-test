@@ -26,7 +26,7 @@ export const MoviesPageComponent = async ({searchParams}: MoviesPageComponentPro
     return (
         <div className="movies-page-container">
             <MoviesList movies={data.results} allGenres={allGenres}/>
-            <PaginationComponent currentPage={currentPage} totalPages={data.total_pages} baseUrl="/"/>
+            <PaginationComponent currentPage={currentPage} totalPages={data.total_pages} baseUrl="/" query={currentQuery}/>
         </div>
     );
 };

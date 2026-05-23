@@ -6,19 +6,30 @@ type PaginationComponentProps = {
     currentPage: number;
     totalPages: number;
     baseUrl: string;
+    query?: string;
 }
 
-export const PaginationComponent: FC<PaginationComponentProps> = ({currentPage, totalPages, baseUrl = '/'}) => {
+export const PaginationComponent: FC<PaginationComponentProps> = ({currentPage, totalPages, baseUrl = '/', query}) => {
     const allPages = totalPages > 500 ? 500 : (totalPages || 500)
     const prevPage = currentPage - 1;
     const nextPage = currentPage + 1;
+
+    const pageUrl = (pageNumber: number) => {
+        const params = new URLSearchParams();
+        if (query) {
+            params.set('query', query);
+        }
+        params.set('page', pageNumber.toString());
+
+        return `${baseUrl}?${params.toString()}`;
+    };
 
     return (
         <div className="pagination-wrapper">
 
             {
                 currentPage > 1 ? (
-                    <Link href={`${baseUrl}?page=${prevPage}`} className="pag-btn">
+                    <Link href={pageUrl(prevPage)} className="pag-btn">
                         Previous
                     </Link>
                 ) : (
@@ -28,7 +39,7 @@ export const PaginationComponent: FC<PaginationComponentProps> = ({currentPage, 
                 )}
 
             {currentPage < allPages ? (
-                <Link href={`${baseUrl}?page=${nextPage}`} className="pag-btn">
+                <Link href={pageUrl(nextPage)} className="pag-btn">
                     Next
                 </Link>
             ) : (
